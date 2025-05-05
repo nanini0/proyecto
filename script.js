@@ -15,7 +15,6 @@ document.getElementById("studentForm").addEventListener("submit", function(e){
         alert("Error al ingresar la Datos")
          return
     }
-
     const student ={
         name,
         lastName,
