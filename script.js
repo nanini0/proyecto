@@ -22,7 +22,9 @@ document.getElementById("studentForm").addEventListener("submit", function(e){
         grade};
 
 students.push(student);
-console.log(students)
+//console.log(students)
+addStudentToTable(student)
+this.reset()
 
 });
 function addStudentToTable(student){
@@ -30,7 +32,7 @@ function addStudentToTable(student){
     row.innerHTML=`
     <td>${student.name}</td>
     <td>${student.lastName}</td>
-    <td>${student.grade}<td>`;
+    <td>${student.grade}</td>`;
 
     tableBody.appendChild(row);
 }
