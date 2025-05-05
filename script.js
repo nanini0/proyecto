@@ -25,7 +25,7 @@ students.push(student);
 //console.log(students)
 addStudentToTable(student)
 this.reset()
-
+//holi
 });
 function addStudentToTable(student){
     const row=document.createElement("tr")
