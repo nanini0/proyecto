@@ -31,6 +31,7 @@ function addStudentToTable(student){
     row.innerHTML=`
     <td>${student.name}</td>
     <td>${student.lastName}</td>
+    <td>${student.date}</td>
     <td>${student.grade}</td>`;
 
     tableBody.appendChild(row);
