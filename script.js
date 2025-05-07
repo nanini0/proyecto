@@ -13,7 +13,7 @@ document.getElementById("studentForm").addEventListener("submit", function(e){
 
     if(!name || !lastName || isNaN(grade) || grade<1 || grade >7){
         alert("Error al ingresar la Datos")
-         return
+        return
     }
     const student ={
         name,
