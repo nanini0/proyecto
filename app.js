@@ -7,18 +7,18 @@ document.getElementById("studentForm").addEventListener("submit",
         e.preventDefault();
 
         const name = document.getElementById("name").value.trim();
-        const lasName = document.getElementById("lastName").value.trim();
+        const lastName = document.getElementById("lastName").value.trim();
         const grade = parseFloat(document.getElementById("grade").value)
         const date = document.getElementById("date").value.trim()
 
-        if (!name || !lasName || isNaN(grade) || grade<1 || grade>7 || isNaN(date) ){
+        if (!name || !lastName || isNaN(grade) || grade<1 || grade>7  ){
             alert("Error al ingresar los datos")
             return
         }
         // objeto estudiante 
         const student={
             name,
-            lasName,
+            lastName,
             grade,
             date
         }
