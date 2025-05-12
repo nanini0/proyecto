@@ -1,6 +1,9 @@
 //arreglo donde iran los objeos alumno
 const students = [];
-const tableBody=document.querySelector("#studensTable tbody")
+const tableBody=document.querySelector("#studensTable tbody");
+
+const averageDiv=document.getElementById("average");
+
 
 document.getElementById("studentForm").addEventListener("submit",
     function(e){
@@ -25,6 +28,8 @@ document.getElementById("studentForm").addEventListener("submit",
 
         students.push(student)
         addStudentToTable(student)
+        calculateAverage();
+        this.reset()
     }
 );
 
@@ -37,5 +42,18 @@ function addStudentToTable(student){
     <td>${student.grade}</td>
     `;
     tableBody.appendChild(row);
-}
+    }
+
+    function calculateAverage(){
+        if ( students.length===0){
+            averageDiv.textContent="Promedio General del Curso : N/A"
+            return
+        }
+        const total = students.reduce((sum,student)=>sum+student.grade,0);
+        const prom=total/students.length;
+        averageDiv.textContent="Promedio General del Curso :" + prom.toFixed(2);
+    }
+        
+
+
 
